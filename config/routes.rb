@@ -1,4 +1,10 @@
+
 Rails.application.routes.draw do
- get "/names" => "users#index"
- post "/create" => "users#create"
+  get "/" => "memos#index"
+  get "/new" => "memos#new"
+  post "/create" => "memos#create"
+  delete "/memos/:id" =>"memos#destroy"
+  get "/memos/:id/edit" => "memos#edit"
+  patch "/memos/:id" => "memos#update"
+  get "/categories/:id" => "categories#show"
 end
